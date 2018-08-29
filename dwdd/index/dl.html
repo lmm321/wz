@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>登录网页</title>
+    <style>
+   body{
+       width: 100%;
+       height: 100%;
+   }
+        ul,ol{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            color: #000;
+            font-size: 25px;
+        }
+        a:hover{
+            color:#FF6600;
+        }
+        header{
+            width: 100%;
+            height: 150px;
+        }
+        header #logo{
+            width: 99px;
+            height: 72px;
+            background: url("../images/logo.jpg") no-repeat ;
+            margin: 1% 5%;
+        }
+        main{
+            width: 100%;
+            height: 1000px;
+        }
+        main .gif{
+            width: 800px;
+            height: 380px;
+            background: url("../images/1.gif") no-repeat;
+            -webkit-background-size: cover;
+            background-size: cover;
+            margin: 0px auto;
+        }
+        main .m_ul1{
+            width: 50%;
+            height: 35%;
+            margin: 10px auto;
+        }
+        main .m_ul1 li{
+            width: 40%;
+            height: 10%;
+            margin: 0px auto;
+        }
+   main .m_ul1 li:nth-of-type(1){
+       width: 45%;
+       margin: 20px auto;
+   }
+   main .m_ul1 li:nth-of-type(1) a{
+       color:#FF6600;
+       font-size: 30px;
+   }
+   #content{
+       width: 500px;
+       height: 301px;
+       position: relative;
+       margin: 0px auto;
+   }
+   #content a{
+       width: 70px;
+       height: 70px;
+       font-size: 60px;
+       font-weight: bold;
+       color: #FF6600;
+       text-align: center;
+       position: absolute;
+       top:150px;
+       text-decoration: none;
+   }
+   #content a:hover{
+       color:#000;
+   }
+   #prev{
+       position: absolute;
+       left: -70px;
+   }
+   #next{
+       position: absolute;
+       right:-70px;
+   }
+   #img1 {
+       width: 500px;
+       height: 301px;
+       margin: 0px auto;
+   }
+    </style>
+
+    <script type="text/javascript">
+    window.onload=function(){
+        var oPrev=document.getElementById("prev");
+        var oNext=document.getElementById("next");
+        var oImg1=document.getElementById("img1");
+        var arrUrl=["../images/dl1.jpg","../images/dl2.jpg","../images/dl3.jpg","../images/dl2.jpg"];
+        var num = 0;
+
+        oImg1.src=arrUrl[num];
+
+    oNext.onclick=function (){
+        num++;
+
+    if(num == arrUrl.length){
+        num=0;
+
+    }
+    oImg1.src=arrUrl[num];
+
+    }
+    oPrev.onclick=function (){
+        num--;
+
+    if(num == -1){
+        num=arrUrl.length-1;
+
+    }
+    oImg1.src=arrUrl[num];
+
+    }
+
+    }
+    </script>
+</head>
+<body>
+<header>
+    <div id="logo"></div>
+</header>
+<main>
+    <div class="gif"></div>
+    <ul class="m_ul1">
+        <li><a href="index.html">欢迎来到"潮人PA"</a></li>
+        <li><a href="index.html">>"潮人" 专卖店</a></li>
+        <li><a href="index.html">>商店登录</a></li>
+        <li><a href="index.html">>发现 <br/>
+            "不一样的世界"</a></li>
+    </ul>
+    <!--箭头切换-->
+    <div id="content">
+        <a id="prev" href="javascript:;"><</a>
+        <a id="next" href="javascript:;">></a>
+        <img id="img1" src="../images/dl1.jpg">
+    </div>
+</main>
+</body>
+</html>

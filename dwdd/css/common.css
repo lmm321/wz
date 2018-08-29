@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+* {padding: 0;margin: 0;}
+body {margin: 0px;padding: 0px;min-width:1200px;}
+
+/*相关样式*/
+#showbox {
+    width: 600px;
+    height: 600px;
+    background:#eee;
+    border: 1px solid #ccc;
+    z-index: 99999;
+}
+#showbox span { width: 600px;
+    height: 600px;
+    background:url(../images/ggx.jpg) repeat;
+    border: 1px solid #000;
+}
+#showsum { left:25px; margin-top:10px;}
+#showsum span { border:1px solid #ddd;}
+#showsum span.sel { border:1px solid #f60;}
+
+.showpage { width:400px; position:relative;}
+.showpage a { display:block; width:60px; border:1px solid #ddd; height:60px; line-height:60px;
+    background:#ccc; text-align:center;
+    font-size:18px; position:absolute;
+    left:0; top:-62px; text-decoration:none;
+    color:#999;}
+.showpage a#shownext { left:auto; right:0;}
+.showpage a:hover { background:#ccc; color:#777;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

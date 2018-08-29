@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=dervice-width,initial-scale=1.0">
+    <title>商品主页</title>
+    <script src="../js/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/swiper-3.4.0.jquery.min.js" ></script>
+    <link rel="stylesheet" href="../css/swiper-3.2.7.min.css" />
+    <link rel="stylesheet" href="../css/style.css" type="text/css"/>
+    <script type="text/javascript">
+        window.onload=function(){
+            var oPrev=document.getElementById("prev");
+            var oNext=document.getElementById("next");
+            var oImg1=document.getElementById("img1");
+            var arrUrl=["../images/banner2.jpg","../images/banner4.jpg","../images/banner3.jpg","../images/banner5.jpg"];
+            var num = 0;
+
+            oImg1.src=arrUrl[num];
+
+            oNext.onclick=function (){
+                num++;
+
+                if(num == arrUrl.length){
+                    num=0;
+
+                }
+                oImg1.src=arrUrl[num];
+
+            }
+            oPrev.onclick=function (){
+                num--;
+
+                if(num == -1){
+                    num=arrUrl.length-1;
+
+                }
+                oImg1.src=arrUrl[num];
+
+            }
+
+        }
+    </script>
+</head>
+<body>
+<header>
+    <ul class="h_ul1">
+        <li ><a href="">"潮人PA"首页</a>
+          </li>
+        <li><a href=""></a> <span>贵宾热线：400-2783-6429</span></li>
+        <div class="fr">
+        <li><a href="">稍后再尝试</a></li>
+        <li class="h_li2"><a href="">我的“潮人PA”</a>
+            <ul>
+                <li><a href="">我的订单</a></li>
+                <li><a href="">我的收藏</a></li>
+                <li><a href="">已购商品</a></li>
+                <li><a href="">我的礼券</a></li>
+                <li><a href="">我的积分</a></li>
+            </ul></li>
+        <li class="h_li6"><a href="">手机下载</a>
+            <ul>
+                <li><a href="">扫描下载APP <br/>
+                立即赠送 <span>50元红包</span></a></li>
+            </ul></li>
+            <li><a href="">帮助中心</a></li>
+            </div>
+    </ul>
+    <div id="bottom">
+        <ul class="h_ul2">
+            <li><a href=""><img src="../images/logo.jpg" alt=""/></a></li>
+            <li><a href=""><img src="../images/logoscp.jpg" alt=""/></a></li>
+            <li><a href=""><input type="text" size="30px" placeholder="阿玛尼 劳力士 香奈儿 路易威登"/>
+                <span class="ss">搜索</span>
+            </a></li>
+            <li><a href=""><img src="../images/logo.gif" alt=""/>潮人PA海外购</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <ul class="m_ul">
+        <li class="m_li1"><a href="">商品分类</a>
+            <ul class="spfl">
+                <li><a href="lby.html">推荐品牌</a></li>
+                <li class="s_li2"><a href="lby.html">箱包</a></li>
+                <li class="ej"><a href="lby.html">美妆</a>
+                    <ul class="sj">
+                        <li><a href="lby.html"><span>美妆</span>洗面奶/水/精华/乳液/
+                            眼霜/卸妆水/眼膜/面膜/香水</a></li>
+                        <li><a href="lby.html"><span>彩妆</span>
+                            洗面奶/水/精华/乳液/
+                            眼霜/卸妆水/眼膜/面膜/香水</a></li>
+                        <li><a href="lby.html"><span>彩妆</span>
+                            洗面奶/水/精华/乳液/
+                            眼霜/卸妆水/眼膜/面膜/香水</a></li>
+                    </ul></li>
+                <li class="mmj"><a href="lby.html">服装</a>
+                    <ul class="mj">
+                        <li><a href=""><span>上衣</span>
+                            毛衣/衬衣/半袖/外套/羽绒服/西服/胸罩</a></li>
+                        <li><a href=""><span>裤子</span>
+                            短裤/裤衩/内裤/长裤/西裤
+                            鞋/帽/半袖帽/</a></li>
+                        <li><a href=""><span>服装</span>
+                            毛衣/衬衣/半袖/外套/羽绒服/西服/胸罩
+                            /</a></li>
+                    </ul></li>
+                <li><a href="lby.html">腕表</a></li>
+                <li><a href="lby.html">配饰</a></li>
+                <li><a href="lby.html">鞋靴</a></li>
+                <li><a href="lby.html">母婴</a></li>
+                <li><a href="lby.html">美酒</a></li>
+                <li><a href="lby.html">美食</a></li>
+                <li><a href="lby.html">家具</a></li>
+                <li><a href="lby.html">电子</a></li>
+                <li><a href="lby.html">办公</a></li>
+                <li><a href="lby.html">礼品</a></li>
+                <li><a href="lby.html">海外购</a></li>
+            </ul></li>
+        <li><a href="lby.html">潮牌</a></li>
+        <li><a href="spy.html">最新</a></li>
+        <li><a href="lby.html">海外购</a></li>
+        <li><a href="lby.html">时尚</a></li>
+        <li><a href="lby.html">特惠</a></li>
+        <li class="zh"><a href=""></a><span></span></li>
+    </ul>
+    <div id="content">
+        <a id="prev" href="javascript:;"><</a>
+        <a id="next" href="javascript:;">></a>
+        <img id="img1" src="../images/banner2.jpg">
+        <div class="m_mb"></div>
+    </div>
+        <div id="center1">
+        <dl class="m_dl1">
+            <dt></dt>
+            <dd><a href=""><span></span><br/> Ray Ban <br/>雷朋</a></dd>
+            <dd class="m_dd2"><a href=""><span></span><br/> Calvin Klein<br/>卡尔文.克莱恩</a></dd>
+            <dd class="m_dd3"><a href=""><span></span><br/>Dior <br/>迪奥</a></dd>
+            <dd class="m_dd4"><a href=""><span></span><br/> Cartier  <br/>卡地亚</a></dd>
+            <dd class="m_dd5"><a href=""><span></span><br/> Michael Kors/MK <br/>迈克.柯尔</a></dd>
+            <dd><a href=""></a></dd>
+            </dl>
+            <ul class="rm">
+                <li><a href=""><img src="../images/rb.png" alt=""/><span>雷朋</span></a></li>
+                <li><a href=""><img src="../images/ck.png" alt=""/><span>卡尔文.克莱恩</span></a></li>
+                <li><a href=""><img src="../images/Dior.png" alt=""/><span>迪奥</span></a></li>
+                <li><a href=""><img src="../images/Cartier.png" alt=""/><span>卡地亚</span></a></li>
+                <li><a href=""><img src="../images/MK.png" alt=""/><span>迈克.柯尔</span></a></li>
+                <li><a href=""><img src="../images/TC.png" alt=""/><span>蒂芙尼</span></a></li>
+                <li><a href=""><img src="../images/GL.png" alt=""/><span>姬龙雪</span></a></li>
+                <li><a href=""><img src="../images/BL.png" alt=""/><span>B5 by Blocco5</span></a></li>
+                <li><a href=""><img src="../images/RM.png" alt=""/><span>瑞贝卡·明可弗</span></a></li>
+                <li><a href=""><img src="../images/CZ.png" alt=""/><span>西铁城</span></a></li>
+                <li><a href=""><img src="../images/SR.png" alt=""/><span>施华洛世奇</span></a></li>
+                <li><a href=""><img src="../images/LC.png" alt=""/><span>兰蔻</span></a></li>
+                <li><a href=""><img src="../images/LG.png" alt=""/><span>珑骧</span></a></li>
+                <li><a href=""><img src="../images/JC.png" alt=""/></a><span>橘滋</span></li>
+            </ul>
+            <dl id="hwsh">
+                <dt><img src="../images/hwsh.jpg" alt=""/></dt>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+                <dd><a href=""></a></dd>
+            </dl>
+    </div>
+    <!--center2-->
+    <div class="container">
+        <div class="swiper-container swiper1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide ">热卖品牌</div>
+                <div class="swiper-slide">新品推荐</div>
+                <div class="swiper-slide">生活方式</div>
+            </div>
+        </div>
+        <!-- swiper2 -->
+        <div class="swiper-container swiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-no-swiping">
+                    <dl>
+                        <dt><img src="../images/target1.jpg" alt=""/></dt>
+                        <dd ><a href=""><span>Rosemont<br/>表中玫瑰<br/>￥47855</span></a></dd>
+                        <dd><a href=""><span>Coach 1941<br/>￥ 1895</span></a></dd>
+                        <dd><a href=""><span>Dolce & Gabbana<br/>￥ 3172</span></a></dd>
+                        <dd><a href=""><span>G-Shock<br/>￥ 2300</span></a></dd>
+                        <dd><a href=""><span>Cleobella<br/>￥ 1130</span></a></dd>
+                        <dd><a href=""><span>香奈儿<br/>￥47855</span></a></dd>
+                    </dl></div>
+                <div class="swiper-slide swiper-no-swiping s2">  <dl>
+                    <dt><img src="../images/target2_!.jpg" alt=""/></dt>
+                    <dd ><a href=""><span>Rosemont<br/>表中玫瑰<br/>￥47855</span></a></dd>
+                    <dd><a href=""><span>Coach 1941<br/>￥ 1895</span></a></dd>
+                    <dd><a href=""><span>Dolce & Gabbana<br/>￥ 3172</span></a></dd>
+                    <dd><a href=""><span>G-Shock<br/>￥ 2300</span></a></dd>
+                    <dd><a href=""><span>Cleobella<br/>￥ 1130</span></a></dd>
+                    <dd><a href=""><span>香奈儿<br/>￥47855</span></a></dd>
+                </dl></div>
+                <div class="swiper-slide swiper-no-swiping s3">
+                    <dl>
+                        <dt><img src="../images/target3_!.jpg" alt=""/></dt>
+                        <dd ><a href=""><span>Rosemont<br/>表中玫瑰<br/>￥47855</span></a></dd>
+                        <dd><a href=""><span>Coach 1941<br/>￥ 1895</span></a></dd>
+                        <dd><a href=""><span>Dolce & Gabbana<br/>￥ 3172</span></a></dd>
+                        <dd><a href=""><span>G-Shock<br/>￥ 2300</span></a></dd>
+                        <dd><a href=""><span>Cleobella<br/>￥ 1130</span></a></dd>
+                        <dd><a href=""><span>香奈儿<br/>￥47855</span></a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--购物中心-->
+    <div id="center3">
+        <dl class="c3_dl">
+            <dt><img src="../images/gwzx.jpg" alt=""/></dt>
+            <dd>经典箱包 <a href=""> <span>Cleobella</span></a></dd>
+            <dd>典藏腕表<a href=""><span>Cleobella</span></a></dd>
+            <dd>精致配饰<a href=""><span>Cleobella</span></a></dd>
+            <dd>个护化妆<a href=""><span>Cleobella</span></a></dd>
+            <dd>时尚鞋服<a href=""><span>Cleobella</span></a></dd>
+        </dl>
+    </div>
+    <div id="center4">
+        <div id="bz"><img src="../images/jdxb.jpg" alt=""/><a href="">SHOW MORE >></a></div>
+        <aside>
+            <ul class="a_ul1">
+                <li><a href="">单肩包</a></li>
+                <li><a href="">手提包</a></li>
+                <li><a href="">手提斜跨包</a></li>
+                <li><a href="">双肩包</a></li>
+                <li><a href="">手拿包</a></li>
+                <li><a href="">钱包</a></li>
+                <li><a href="">小皮件</a></li>
+                <li><a href="">旅行箱/包</a></li>
+                <li><a href="">斜挎包</a></li>
+                <li><a href="">化妆箱/包</a></li>
+            </ul>
+            <ul class="a_ul2">
+                <li><img src="../images/vl.png" alt=""/></li>
+                <li><img src="../images/x.jpg" alt=""/></li>
+                <li><img src="../images/logo.jpg" alt=""/></li>
+                <li><img src="../images/gc.png" alt=""/></li>
+            </ul>
+        </aside>
+        <dl class="a_dl1">
+            <dt><img src="../images/jfx.jpg" alt=""/><a href="">Givenchy纪梵希 <br/>
+                大牌驾到 <br/>
+                值得拥有的经典品牌</a></dt>
+            <dd><a href=""><img src="../images/fd.jpg" alt=""/></a></dd>
+            <dd><a href=""><img src="../images/ly.jpg" alt=""/></a></dd>
+            <dd><a href=""><img src="../images/dg.jpg" alt=""/></a></dd>
+            <dd><a href=""><img src="../images/bl.jpg" alt=""/></a></dd>
+        </dl>
+    </div>
+    <div id="center4">
+        <div id="bz"><img src="../images/dcwb.jpg" alt=""/><a href="">SHOW MORE >></a></div>
+        <aside>
+            <ul class="a_ul1">
+                <li><a href="">时尚</a></li>
+                <li><a href="">瑞表</a></li>
+                <li><a href="">德国</a></li>
+                <li><a href="">限量版</a></li>
+                <li><a href="">法国</a></li>
+                <li><a href="">机械表</a></li>
+                <li><a href="">石英表</a></li>
+                <li><a href="">三针</a></li>
+                <li><a href="">计时码表</a></li>
+                <li><a href="">瑞士</a></li>
+            </ul>
+            <ul class="a_ul2">
+                <li><img src="../images/ga.png" alt=""/></li>
+                <li><img src="../images/ts.png" alt=""/></li>
+                <li><img src="../images/rb.png" alt=""/></li>
+                <li><img src="../images/vc.png" alt=""/></li>
+            </ul>
+        </aside>
+        <dl class="a_dl1">
+            <dt><img src="../images/wathches.jpg" alt=""/><a href="">Givenchy纪梵希 <br/>
+                大牌驾到 <br/>
+                值得拥有的经典品牌</a></dt>
+            <dd><a href=""><img src="../images/bgc.jpg" alt=""/></a></dd>
+            <dd><a href=""><img src="../images/blls.jpg" alt=""/></a></dd>
+            <dd><a href=""><img src="../images/bomj.jpg" alt=""/></a></dd>
+            <dd><a href=""><img src="../images/brlls.jpg" alt=""/></a></dd>
+        </dl>
+    </div>
+    <div id="center4">
+        <div id="bz"><img src="../images/jzps.jpg" alt=""/><a href="">SHOW MORE >></a></div>
+        <aside>
+            <ul class="a_ul1">
+                <li><a href="">首饰</a></li>
+                <li><a href="">腰带</a></li>
+                <li><a href="">领带1</a></li>
+                <li><a href="">丝巾</a></li>
+                <li><a href="">帽子</a></li>
+                <li><a href="">手套</a></li>
+                <li><a href="">伞</a></li>
+                <li><a href="">挂饰</a></li>
+                <li><a href="">手杖</a></li>
+                <li><a href="">眼镜</a></li>
+            </ul>
+            <ul class="a_ul2">
+                <li><img src="../images/vl.png" alt=""/></li>
+                <li><img src="../images/x.jpg" alt=""/></li>
+                <li><img src="../images/rb.png" alt=""/></li>
+                <li><img src="../images/gc.png" alt=""/></li>
+            </ul>
+        </aside>
+        <dl class="a_dl1">
+            <dt><img src="../images/js.jpg" alt=""/><a href="">Givenchy纪梵希 <br/>
+                大牌驾到 <br/>
+                值得拥有的经典品牌</a></dt>
+            <dd><a href=""><img src="../images/js1.jpg" alt=""/></a></dd>
+            <dd><a href=""><img src="../images/js2.jpg" alt=""/></a></dd>
+            <dd><a href=""><img src="../images/js3.jpg" alt=""/></a></dd>
+            <dd><a href=""><img src="../images/js4.jpg" alt=""/></a></dd>
+        </dl>
+    </div>
+    <div id="center4">
+        <div id="bz"><img src="../images/ghhz.jpg" alt=""/><a href="">SHOW MORE >></a></div>
+        <aside>
+            <ul class="a_ul1">
+                <li><a href="">时尚</a></li>
+                <li><a href="">瑞表</a></li>
+                <li><a href="">德国</a></li>
+                <li><a href="">限量版</a></li>
+                <li><a href="">法国</a></li>
+                <li><a href="">机械表</a></li>
+                <li><a href="">石英表</a></li>
+                <li><a href="">三针</a></li>
+                <li><a href="">计时码表</a></li>
+                <li><a href="">瑞士</a></li>
+            </ul>
+            <ul class="a_ul2">
+                <li><img src="../images/ga.png" alt=""/></li>
+                <li><img src="../images/ts.png" alt=""/></li>
+                <li><img src="../images/rb.png" alt=""/></li>
+                <li><img src="../images/vc.png" alt=""/></li>
+            </ul>
+        </aside>
+        <dl class="a_dl1">
+            <dt><img src="../images/hzp1.jpg" alt=""/><a href="">Givenchy纪梵希 <br/>
+                大牌驾到 <br/>
+                值得拥有的经典品牌</a></dt>
+            <dd><a href=""><img src="../images/hzp2.jpg" alt=""/></a></dd>
+            <dd><a href=""><img src="../images/hzp3.jpg" alt=""/></a></dd>
+            <dd><a href=""><img src="../images/hzp4.jpg" alt=""/></a></dd>
+            <dd><a href=""><img src="../images/hzp5.jpg" alt=""/></a></dd>
+        </dl>
+    </div>
+    <!--main bottom-->
+    <div id="zh">
+        <ul >
+            <li><img src="../images/zthd.jpg" alt=""/></li>
+            <li><img src="../images/zthd1.jpg" alt=""/></li>
+            <li><img src="../images/zthd2.jpg" alt=""/></li>
+            <li><img src="../images/zthd3.jpg" alt=""/></li>
+            <li><img src="../images/zthd4.jpg" alt=""/></li>
+            <li><img src="../images/zthd5.jpg" alt=""/></li>
+            <li><img src="../images/zthd6.jpg" alt=""/></li>
+        </ul>
+        <ul >
+            <li><img src="../images/zthd2_1.jpg" alt=""/></li>
+            <li><img src="../images/zthd2_2.jpg" alt=""/></li>
+            <li><img src="../images/zthd_3.jpg" alt=""/></li>
+            <li class="li3"><img src="../images/zthd2_5.jpg" alt=""/></li>
+            <div class="zh_div">
+            <li><img src="../images/zthd2_4.jpg" alt=""/></li>
+            <li><img src="../images/zthd2_6.jpg" alt=""/></li>
+            <li><img src="../images/zthd2_7.jpg" alt=""/></li>
+</div>
+        </ul>
+    </div>
+    <div id="fixed">
+        <ul >
+            <li><a href="#bottom">↑</a></li>
+            <li><a href="#center1">HOT</a></li>
+            <li><a href="#center3">❤</a></li>
+            <li><a href="#footer">↓</a></li>
+        </ul>
+    </div>
+</main>
+<footer id="footer">
+    <ul class="f_ul1">
+        <li><a href=""><img src="../images/f1.jpg" alt=""/><span>正品保证 <br/>品牌授权，官方验真</span></a></li>
+        <li><a href=""><img src="../images/f2.jpg" alt=""/>
+        <span>专柜发送 <br/>专柜直接或到店自取</span></a></li>
+        <li><a href=""><img src="../images/f3.jpg" alt=""/>
+        <span>无忧售后 <br/>七天无理由退换货</span></a></li>
+        <li><a href=""><img src="../images/f4.jpg" alt=""/>
+        <span>VIP服务 <br/>享品牌会员售前售货服务</span></a></li>
+        <li><a href=""><img src="../images/f5.jpg" alt=""/>
+        <span>权威荣誉 <br/>商务部授予诚信示范企业</span></a></li>
+    </ul>
+    <div class="f_bg">
+    <dl>
+        <dt>服务保障</dt>
+        <dd><a href="">品牌授权正品</a></dd>
+        <dd><a href="">品牌客服</a></dd>
+        <dd><a href="">预约到店体验</a></dd>
+        <dd><a href="">7天无理由退换</a></dd>
+    </dl>
+    <dl>
+        <dt>使用帮助</dt>
+        <dd><a href="">常见问题</a></dd>
+        <dd><a href="">会员制度</a></dd>
+        <dd><a href="">集团采购</a></dd>
+        <dd><a href="">礼品卡</a></dd>
+    </dl>
+    <dl>
+        <dt>支付方式</dt>
+        <dd><a href="">到店付款</a></dd>
+        <dd><a href="">货到付款</a></dd>
+        <dd><a href="">在线支付</a></dd>
+        <dd><a href="">余额支付</a></dd>
+    </dl>
+    <dl>
+        <dt>配送方式</dt>
+        <dd><a href="">配送说明</a></dd>
+        <dd><a href="">专柜自提</a></dd>
+        <dd><a href="">运费说明</a></dd>
+        <dd><a href="">验货签收</a></dd>
+    </dl>
+    <dl>
+        <dt>售后服务</dt>
+        <dd><a href="">品牌售后</a></dd>
+        <dd><a href="">售后咨询</a></dd>
+        <dd><a href="">退换政策</a></dd>
+        <dd><a href="">发票保障</a></dd>
+    </dl>
+        <div class="f_bottom">
+        <ul class="f_ul2">
+            <li><a href="">箱包</a></li>
+            <li><a href="">美装</a></li>
+            <li><a href="">服饰</a></li>
+            <li><a href="">腕表</a></li>
+            <li><a href="">配饰</a></li>
+            <li><a href="">鞋靴</a></li>
+            <li><a href="">特惠</a></li>
+            <li><a href="">礼品区</a></li>
+        </ul>
+            <ul class="f_ul3">
+                <li><a href="">关于第五大道</a></li>
+                <li><a href="">网站地图</a></li>
+                <li><a href="">品牌合作专区</a></li>
+                <li><a href="">媒体聚焦</a></li>
+                <li><a href="">商务合作</a></li>
+                <li><a href="">商家合作</a></li>
+                <li><a href="">加入潮人PA</a></li>
+                <li><a href="">友情连接</a></li>
+                <li><a href="">佘尚志</a></li>
+                <li><a href="">投诉建议</a></li>
+                <li><a href="">联系我们</a></li>
+            </ul>
+            <ul class="f_ul4">
+                <li><a href="">Copyright © 2008-2016 瑞美嘉信国际信息技术（北京）有限公司  版权所有京ICP备09012701号-1
+                    京公网安备110105007400号 食品经营许可证号：</a></li>
+            </ul>
+            <ul class="f_ul5">
+                <li><img src="../images/zh1.jpg" alt=""/></li>
+                <li><img src="../images/zh2.jpg" alt=""/></li>
+                <li><img src="../images/zh3.jpg" alt=""/></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<script>
+    $(function() {
+        function setCurrentSlide(ele, index) {
+            $(".swiper1 .swiper-slide").removeClass("selected");
+            ele.addClass("selected");
+            //swiper1.initialSlide=index;
+        }
+
+        var swiper1 = new Swiper('.swiper1', {
+//					设置slider容器能够同时显示的slides数量(carousel模式)。
+//					可以设置为number或者 'auto'则自动根据slides的宽度来设定数量。
+//					loop模式下如果设置为'auto'还需要设置另外一个参数loopedSlides。
+            slidesPerView: 3,
+            paginationClickable: true,//此参数设置为true时，点击分页器的指示点分页器会控制Swiper切换。
+            spaceBetween: 10,//slide之间的距离（单位px）。
+            freeMode: true,//默认为false，普通模式：slide滑动时只滑动一格，并自动贴合wrapper，设置为true则变为free模式，slide会根据惯性滑动且不会贴合。
+            loop: false,//是否可循环
+            onTab: function(swiper) {
+                var n = swiper1.clickedIndex;
+            }
+        });
+        swiper1.slides.each(function(index, val) {
+            var ele = $(this);
+            ele.on("click", function() {
+                setCurrentSlide(ele, index);
+                swiper2.slideTo(index, 500, false);
+                //mySwiper.initialSlide=index;
+            });
+        });
+
+        var swiper2 = new Swiper('.swiper2', {
+            //freeModeSticky  设置为true 滑动会自动贴合
+            direction: 'horizontal',//Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)。
+            loop: false,
+//					effect : 'fade',//淡入
+            //effect : 'cube',//方块
+            //effect : 'coverflow',//3D流
+//					effect : 'flip',//3D翻转
+            autoHeight: true,//自动高度。设置为true时，wrapper和container会随着当前slide的高度而发生变化。
+            onSlideChangeEnd: function(swiper) {  //回调函数，swiper从一个slide过渡到另一个slide结束时执行。
+                var n = swiper.activeIndex;
+                setCurrentSlide($(".swiper1 .swiper-slide").eq(n), n);
+                swiper1.slideTo(n, 500, false);
+            }
+        });
+    });
+</script>
+</body>
+</html>
