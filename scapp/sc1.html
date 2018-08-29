@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+ <meta name="viewport" content=" width=device-width,initial-scale=1.0">
+    <title>商城</title>
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/swiper-3.4.0.jquery.min.js" ></script>
+    <link rel="stylesheet" href="css/swiper-3.2.7.min.css" />
+    <link rel="stylesheet" href="css/sc.css" type="text/css"/>
+    <style>
+        .container {
+            /*width: 100%;*/
+            border: 1px solid #ccc;
+        }
+        .swiper1 {position: fixed;
+            top:50px;
+            z-index: 9999;
+            width: 100%;
+            background: #fff;
+        }
+        .swiper1 .selected {
+            color: #ec5566;
+            border-bottom: 2px solid brown;
+        }
+        .swiper1 .swiper-slide {
+            text-align: center;
+            font-size: 16px;
+            height: 50px;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            cursor: pointer;
+            color: #A2A2A2;
+        }
+        .swiper2 {
+            width: 100%;
+        }
+        .swiper2 .swiper-slide {
+            /*position: absolute;*/
+            /*top:40px;*/
+            height:3000px;
+            /*background-color: #ccc;*/
+            color: #fff;
+            text-align: center;
+            box-sizing: border-box !important;
+            overflow-x: hidden !important;
+        }
+    </style>
+    <script language="javascript" type="text/javascript">
+    function leftTimer(year,month,day,hour,minute,second){
+    var leftTime = (new Date(year,month-1,day,hour,minute,second)) -(new Date()); //计算剩余的毫秒数
+    var days = parseInt(leftTime / 100000 / 100 / 60 / 24 , 10); //计算剩余的天数
+    var hours = parseInt(leftTime / 1000 / 60 / 60 % 24 , 10); //计算剩余的小时
+    var minutes = parseInt(leftTime / 10000 / 600 % 60, 10);//计算剩余的分钟
+    var seconds = parseInt(leftTime / 1000 % 60, 10);//计算剩余的秒数
+    days = checkTime(days);
+    hours = checkTime(hours);
+    minutes = checkTime(minutes);
+    seconds = checkTime(seconds);
+    setInterval("leftTimer(2016,11,11,11,11,11)",1000);
+    document.getElementById("timer").innerHTML = days+"天" + hours+"时" + minutes+"分"+seconds+"秒";
+    }
+    function checkTime(i){ //将0-9的数字前面加上0，例1变为01
+    if(i<10)
+    {
+    i = "" + i;
+    }
+    return i;
+    }
+
+    </script>
+</head>
+<body onload="leftTimer()">
+<!--header-->
+<header>
+    <ul class="h_ul1">
+        <form action="">
+            <li><a href=""><img src="images/index_sys.jpg" alt=""/></a></li>
+            <li><a href=""><input size="30px" type="text" /> <span></span></a></li>
+            <li><a href=""><img src="images/index_bb.jpg" alt=""/></a></li>
+        </form>
+    </ul></header>
+<!--main-->
+<main>
+    <div class="container">
+        <div class="swiper-container swiper1">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide selected"><a href="index1.html">首页</a></div>
+                <div class="swiper-slide">箱包</div>
+                <div class="swiper-slide">美妆</div>
+                <div class="swiper-slide">服装</div>
+                <div class="swiper-slide">腕表</div>
+                <div class="swiper-slide"></div>
+            </div>
+        </div>
+        <!-- swiper2 -->
+        <div class="swiper-container swiper2">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide swiper-no-swiping m1">
+                    <div style="width: 100%;background-color: #fff;">上面导航栏可以滑动</div>
+                    <div class="banner">
+                    <div id="bd">
+                       <a href="#m1"></a>
+                        <a href="#m2"></a>
+                        <a href="#m3"></a>
+                       <a href="#m4"></a>
+                    </div>
+                    <ul id="m_banner">
+                        <li class="b_li1" id="m1"></li>
+                        <li class="b_li2" id="m2"></li>
+                        <li class="b_li3" id="m3" ></li>
+                        <li class="b_li4" id="m4"></li>
+                    </ul>
+                        </div>
+                    <div id="time">
+                    <h4>限时秒杀：</h4>
+                    <div id="timer"></div></div>
+                    <ul class="m_ul3">
+                    <li><a href=""><img src="images/sc_xnr1.jpg" alt=""/></a></li>
+                    <li class="li2"><a href=""><img src="images/sc_xnr4.jpg" alt=""/></a></li>
+                    <li class="li2"><a href=""><img src="images/sc_xnr5.jpg" alt=""/></a></li>
+                    <li class="li2"><a href=""><img src="images/sc_xnr6.jpg" alt=""/></a></li>
+                    <li><a href=""></a></li>
+                    </ul>
+                    <ul class="m_ul5">
+                    <li><a href=""><img src="images/sc_sp1.jpg" alt=""/></a></li>
+                    <li><a href="">
+                    <video src="images/1533180505%20(4).mp4" controls loop></video>
+                    </a></li>
+                    <li class="li5_2"><a href=""><img src="images/sc_sp.jpg" alt=""/></a></li>
+                    <li class="li5_2"><a href=""><img src="images/sc_sp2.jpg" alt=""/></a></li>
+                    </ul>
+                    <div class="center">
+                    <dl>
+                    <dt><a href=""><img src="images/sc_jfx.jpg" alt=""/></a></dt>
+                    <dd><a href=""><img src="images/sc_jfx1.jpg" alt=""/></a></dd>
+                    </dl> <ul class="m_ul4">
+                    <div class="center1">
+                    <li><a href="">
+                    <img src="images/sc_jfx2.jpg" alt=""/>
+                    <span>Givenchy 纪梵希</span>
+                    <br/><span class="zt">￥9890</span></a></li>
+                    <li><a href="">
+                    <img src="images/sc_jfx3.jpg" alt=""/>
+                    <span>Givenchy 纪梵希</span>
+                    <br/><span class="zt">￥295</span></a></li>
+                    <li><a href="">
+                    <img src="images/sc_jfx4.jpg" alt=""/>
+                    <span>Givenchy 纪梵希</span>
+                    <br/><span class="zt">￥440</span>
+                    </a></li>
+                    <li><a href="">
+                    <img src="images/sc_jfx5.jpg" alt=""/>
+                    <span>Givenchy 纪梵希</span>
+                    <br/><span class="zt">￥495</span>
+                    </a></li>
+                    <li><a href="">
+                    <img src="images/sc_jfx6.jpg" alt=""/>
+                    <span>Givenchy 纪梵希</span>
+                    <br/><span class="zt">￥325</span>
+                    </a></li>
+                    <li><a href="">
+                    <img src="images/sc_jfx7.jpg" alt=""/>
+                    <span>Givenchy 纪梵希</span>
+                    <br/><span class="zt">￥1650</span>
+                    </a></li>
+                    <li><a href="">
+                    <img src="images/sc_jfx8.jpg" alt=""/>
+                    <span>Givenchy 纪梵希</span>
+                    <br/><span class="zt">￥280</span>
+                    </a></li>
+                    <li><a href="">
+                    <img src="images/sc_jfx9.jpg" alt=""/>
+                    <span>Givenchy 纪梵希</span>
+                    <br/><span class="zt">￥339</span>
+                    </a></li>
+                    <li class="li1"><a href=""><span>Show</span><br/>ALL</a></li>
+                    </div></ul>
+                    </div>
+                    <div class="center center2">
+                    <dl>
+                    <dd><a href=""><img src="images/sc_nb1.jpg" alt=""/></a></dd>
+                    </dl> <ul class="m_ul4">
+                    <div class="center1">
+                    <li><a href="">
+                    <img src="images/sc_nb2.jpg" alt=""/>
+                    <span>Rolex 劳力士</span>
+                    <br/><span class="zt">￥989000</span></a></li>
+                    <li><a href="">
+                    <img src="images/sc_nb3.jpg" alt=""/>
+                    <span>Rolex 劳力士</span>
+                    <br/><span class="zt">￥245000</span></a></li>
+                    <li><a href="">
+                    <img src="images/sc_nb4.jpg" alt=""/>
+                    <span>Rolex 劳力士</span>
+                    <br/><span class="zt">￥440000</span>
+                    </a></li>
+                    <li><a href="">
+                    <img src="images/sc_nb5.jpg" alt=""/>
+                    <span>Rolex 劳力士</span>
+                    <br/><span class="zt">￥495000</span>
+                    </a></li>
+                    <li><a href="">
+                    <img src="images/sc_nb6.jpg" alt=""/>
+                    <span>Rolex 劳力士</span>
+                    <br/><span class="zt">￥325000</span>
+                    </a></li>
+                    <li><a href="">
+                    <img src="images/sc_nb7.jpg" alt=""/>
+                    <span>Rolex 劳力士</span>
+                    <br/><span class="zt">￥1650000</span>
+                    </a></li>
+                    <li><a href="">
+                    <img src="images/sc_nb8.jpg" alt=""/>
+                    <span>Rolex 劳力士</span>
+                    <br/><span class="zt">￥280000</span>
+                    </a></li>
+                    <li><a href="">
+                    <img src="images/sc_nb9.jpg" alt=""/>
+                    <span>Rolex 劳力士</span>
+                    <br/><span class="zt">￥339000</span>
+                    </a></li>
+                    <li class="li1"><a href=""><span>Show</span><br/>ALL</a></li>
+                    </div></ul>
+                    </div>
+                    <dl class="m_nx">
+                        <dt><img src="images/sc_nx1.jpg" alt=""/></dt>
+                        <dd><a href=""><img src="images/sc_nx2.jpg" alt=""/>
+                            <br/><span> Schut <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nx3.jpg" alt=""/>
+                            <br/><span> HSHJKS <br/>￥28900</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_nx17.jpg" alt=""/>
+                            <br/><span> BSJDJ <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nx4.jpg" alt=""/>
+                            <br/><span> ZJNS <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_nx5.jpg" alt=""/>
+                            <br/><span> IWC万国 <br/>￥888890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nx6.jpg" alt=""/>
+                            <br/><span> MONSE <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nx7.jpg" alt=""/>
+                            <br/><span>  MCARY<br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nx8.jpg" alt=""/>
+                            <br/><span> 万宝龙 <br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_nx9.jpg" alt=""/>
+                            <br/><span> 芬迪 <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_nx10.jpg" alt=""/>
+                            <br/><span>  lOVEMOS<br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_nx11.jpg" alt=""/>
+                            <br/><span> DANELE <br/>￥7890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nx12.jpg" alt=""/>
+                            <br/><span> Bobble <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nx13.jpg" alt=""/>
+                            <br/><span>JAY JUN <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_nx14.jpg" alt=""/>
+                            <br/><span> 缪缪 <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nx15.jpg" alt=""/>
+                            <br/><span> GELESTOR <br/>￥28690</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nx18.jpg" alt=""/>
+                            <br/><span> 缪缪 <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nx19.jpg" alt=""/>
+                            <br/><span> 雅诗兰黛 <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nx20.jpg" alt=""/>
+                            <br/><span> Schut <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nx7.jpg" alt=""/>
+                            <br/><span>  MCARY<br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nx8.jpg" alt=""/>
+                            <br/><span> 万宝龙 <br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_nx9.jpg" alt=""/>
+                            <br/><span> 芬迪 <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_nx10.jpg" alt=""/>
+                            <br/><span>  lOVEMOS<br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_nx11.jpg" alt=""/>
+                            <br/><span> DANELE <br/>￥7890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nx12.jpg" alt=""/>
+                            <br/><span> Bobble <br/>￥4890</span>
+                        </a></dd>
+                    </dl>
+                </div>
+                <div class="swiper-slide swiper-no-swiping m2" style="background: #fff;">
+                    <ul class="m2_banner">
+                        <li><a href=""><img src="images/sc_xb.jpg" alt=""/></a></li>
+                    </ul>
+                    <ul class="m2_lb">
+                        <li><a href="">综合 <img src="images/sc_jt.jpg" alt=""/></a></li>
+                        <li class="lb_li2"><a href="">品牌</a>
+                            <dl class="m2_dl">
+                                <dt>品牌</dt>
+                                <dd><a href="#a">Armani 阿玛尼</a></dd>
+                                <dd> <a href="#">Alexander Wang亚历山大</a></dd>
+                                <dd id="a"><a href="#c">Altuzarra奥图扎拉</a></dd>
+                                <dd id="b"><a href="">巴黎世家 </a></dd>
+                                <dd><a href="">巴利</a></dd>
+                                <dd><a href="">巴宝莉</a></dd>
+                                <dd><a href="">巴宝莉</a></dd>
+                                <dd id="c"><a href="">巴尔曼</a></dd>
+                                <dd ><a href="">香奈儿</a></dd>
+                                <dd><a href="">蔻驰</a></dd>
+                            </dl></li>
+                        <li><a href="">分类</a></li>
+                        <li><a href="">筛选 <img src="images/sc_sx.jpg" alt=""/></a></li>
+                    </ul>
+                    <dl class="m2_xb">
+                        <dd><a href=""><img src="images/sc_xb1.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb2.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER <br/>￥28900</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_xb3.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER<br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb4.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_xb5.jpg" alt=""/>
+                            <br/><span>BLUIGR BLUMANER <br/>￥888890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb6.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb7.jpg" alt=""/>
+                            <br/><span>  BLUIGR BLUMANER<br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb8.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER<br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_xb9.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_xb10.jpg" alt=""/>
+                            <br/><span>  BLUIGR BLUMANER<br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_xb11.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER <br/>￥7890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb12.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb13.jpg" alt=""/>
+                            <br/><span>BLUIGR BLUMANER<br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_xb5.jpg" alt=""/>
+                            <br/><span>BLUIGR BLUMANER <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb10.jpg" alt=""/>
+                            <br/><span>BLUIGR BLUMANER<br/>￥28690</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb11.jpg" alt=""/>
+                            <br/><span>BLUIGR BLUMANER<br/>￥28690</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_xb5.jpg" alt=""/>
+                            <br/><span>BLUIGR BLUMANER <br/>￥888890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb6.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb7.jpg" alt=""/>
+                            <br/><span>  BLUIGR BLUMANER<br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb8.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER<br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_xb9.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_xb10.jpg" alt=""/>
+                            <br/><span>  BLUIGR BLUMANER<br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_xb11.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER <br/>￥7890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb12.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb13.jpg" alt=""/>
+                            <br/><span>BLUIGR BLUMANER<br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_xb3.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER<br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb4.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_xb5.jpg" alt=""/>
+                            <br/><span>BLUIGR BLUMANER <br/>￥888890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb6.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb7.jpg" alt=""/>
+                            <br/><span>  BLUIGR BLUMANER<br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb8.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER<br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_xb12.jpg" alt=""/>
+                            <br/><span> BLUIGR BLUMANER <br/>￥4890</span>
+                        </a></dd>
+                    </dl>
+                </div>
+                <div class="swiper-slide swiper-no-swiping" style="background:#fff;">
+                    <ul class="m2_banner">
+                        <li><a href=""><img src="images/sc_mz.jpg" alt=""/></a></li>
+                    </ul>
+                    <ul class="m2_lb">
+                        <li><a href="">综合 <img src="images/sc_jt.jpg" alt=""/></a></li>
+                        <li class="lb_li2"><a href="">品牌</a>
+                            <dl class="m2_dl">
+                                <dt>品牌</dt>
+                                <dd><a href="">Armani 阿玛尼</a></dd>
+                                <dd> <a href="#">Alexander Wang亚历山大</a></dd>
+                                <dd ><a href="">Altuzarra奥图扎拉</a></dd>
+                                <dd ><a href="">巴黎世家 </a></dd>
+                                <dd><a href="">巴利</a></dd>
+                                <dd><a href="">巴宝莉</a></dd>
+                                <dd><a href="">巴宝莉</a></dd>
+                                <dd ><a href="">巴尔曼</a></dd>
+                                <dd ><a href="">香奈儿</a></dd>
+                                <dd><a href="">蔻驰</a></dd>
+                            </dl></li>
+                        <li><a href="">分类</a></li>
+                        <li><a href="">筛选 <img src="images/sc_sx.jpg" alt=""/></a></li>
+                    </ul>
+                    <dl class="m2_xb">
+                        <dd><a href=""><img src="images/sc_mz16.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾 <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz1.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾  <br/>￥28900</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_mz2.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾 <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz3.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾  <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_mz4.jpg" alt=""/>
+                            <br/><span>GELESTORY 歌蕾  <br/>￥888890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz5.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾  <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz6.jpg" alt=""/>
+                            <br/><span>  GELESTORY 歌蕾 <br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz7.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾 <br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_mz8.jpg" alt=""/>
+                            <br/><span>GELESTORY 歌蕾 <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_mz9.jpg" alt=""/>
+                            <br/><span>  GELESTORY 歌蕾 <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_mz10.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾  <br/>￥7890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz11.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾  <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz12.jpg" alt=""/>
+                            <br/><span>GELESTORY 歌蕾 <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_mz14.jpg" alt=""/>
+                            <br/><span>GELESTORY 歌蕾  <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz13.jpg" alt=""/>
+                            <br/><span>GELESTORY 歌蕾 <br/>￥28690</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz15.jpg" alt=""/>
+                            <br/><span>GELESTORY 歌蕾 <br/>￥28690</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_mz4.jpg" alt=""/>
+                            <br/><span>GELESTORY 歌蕾  <br/>￥888890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz5.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾  <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz6.jpg" alt=""/>
+                            <br/><span>  GELESTORY 歌蕾 <br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz7.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾 <br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_mz8.jpg" alt=""/>
+                            <br/><span>GELESTORY 歌蕾 <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_mz9.jpg" alt=""/>
+                            <br/><span>  GELESTORY 歌蕾 <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_mz10.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾  <br/>￥7890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_mz8.jpg" alt=""/>
+                            <br/><span>GELESTORY 歌蕾 <br/>￥5890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz3.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾  <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_mz4.jpg" alt=""/>
+                            <br/><span>GELESTORY 歌蕾  <br/>￥888890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz5.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾  <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz6.jpg" alt=""/>
+                            <br/><span>  GELESTORY 歌蕾 <br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz7.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾 <br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_mz8.jpg" alt=""/>
+                            <br/><span>GELESTORY 歌蕾 <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_mz9.jpg" alt=""/>
+                            <br/><span>  GELESTORY 歌蕾 <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_mz10.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾  <br/>￥7890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz11.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾  <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz12.jpg" alt=""/>
+                            <br/><span>GELESTORY 歌蕾 <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz6.jpg" alt=""/>
+                            <br/><span>  GELESTORY 歌蕾 <br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz7.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾 <br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_mz8.jpg" alt=""/>
+                            <br/><span>GELESTORY 歌蕾 <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_mz9.jpg" alt=""/>
+                            <br/><span>  GELESTORY 歌蕾 <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_mz10.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾  <br/>￥7890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_mz8.jpg" alt=""/>
+                            <br/><span>GELESTORY 歌蕾 <br/>￥5890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz3.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾  <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_mz4.jpg" alt=""/>
+                            <br/><span>GELESTORY 歌蕾  <br/>￥888890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_mz5.jpg" alt=""/>
+                            <br/><span> GELESTORY 歌蕾  <br/>￥4890</span>
+                        </a></dd>
+                    </dl>
+                </div>
+                <div class="swiper-slide swiper-no-swiping" style="background-color: #fff;" >
+                    <ul class="m2_banner">
+                        <li><a href=""><img src="images/sc_fz.jpg" alt=""/></a></li>
+                    </ul>
+                    <ul class="m2_lb">
+                        <li><a href="">综合 <img src="images/sc_jt.jpg" alt=""/></a></li>
+                        <li class="lb_li2"><a href="">品牌</a>
+                            <dl class="m2_dl">
+                                <dt>品牌</dt>
+                                <dd><a href="">Armani 阿玛尼</a></dd>
+                                <dd> <a href="#">Alexander Wang亚历山大</a></dd>
+                                <dd ><a href="">Altuzarra奥图扎拉</a></dd>
+                                <dd ><a href="">巴黎世家 </a></dd>
+                                <dd><a href="">巴利</a></dd>
+                                <dd><a href="">巴宝莉</a></dd>
+                                <dd><a href="">巴宝莉</a></dd>
+                                <dd ><a href="">巴尔曼</a></dd>
+                                <dd ><a href="">香奈儿</a></dd>
+                                <dd><a href="">蔻驰</a></dd>
+                            </dl></li>
+                        <li><a href="">分类</a></li>
+                        <li><a href="">筛选 <img src="images/sc_sx.jpg" alt=""/></a></li>
+                    </ul>
+                    <dl class="m2_xb">
+                        <dd><a href=""><img src="images/sc_fz1.jpg" alt=""/>
+                            <br/><span> GELESTORY <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz2.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥28900</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_fz3.jpg" alt=""/>
+                            <br/><span> GELESTORY  <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz4.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_fz5.jpg" alt=""/>
+                            <br/><span>GELESTORY   <br/>￥888890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz6.jpg" alt=""/>
+                            <br/><span> GELESTORY  <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz7.jpg" alt=""/>
+                            <br/><span>  GELESTORY<br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz8.jpg" alt=""/>
+                            <br/><span> GELESTORY  <br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_fz9.jpg" alt=""/>
+                            <br/><span>GELESTORY  <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_fz10.jpg" alt=""/>
+                            <br/><span>  GELESTORY  <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_fz11.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥7890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz12.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz13.jpg" alt=""/>
+                            <br/><span>GELESTORY <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_fz14.jpg" alt=""/>
+                            <br/><span>GELESTORY   <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz15.jpg" alt=""/>
+                            <br/><span>GELESTORY  <br/>￥28690</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz16.jpg" alt=""/>
+                            <br/><span>GELESTORY  <br/>￥28690</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_fz4.jpg" alt=""/>
+                            <br/><span>GELESTORY   <br/>￥888890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz5.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz6.jpg" alt=""/>
+                            <br/><span>  GELESTORY  <br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz7.jpg" alt=""/>
+                            <br/><span> GELESTORY  <br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_fz8.jpg" alt=""/>
+                            <br/><span>GELESTORY <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_fz9.jpg" alt=""/>
+                            <br/><span>  GELESTORY  <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_fz10.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥7890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_fz8.jpg" alt=""/>
+                            <br/><span>GELESTORY  <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_fz3.jpg" alt=""/>
+                            <br/><span> GELESTORY  <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz4.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_fz5.jpg" alt=""/>
+                            <br/><span>GELESTORY   <br/>￥888890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz6.jpg" alt=""/>
+                            <br/><span> GELESTORY  <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz7.jpg" alt=""/>
+                            <br/><span>  GELESTORY<br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz8.jpg" alt=""/>
+                            <br/><span> GELESTORY  <br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz16.jpg" alt=""/>
+                            <br/><span>GELESTORY  <br/>￥28690</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_fz4.jpg" alt=""/>
+                            <br/><span>GELESTORY   <br/>￥888890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz5.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz6.jpg" alt=""/>
+                            <br/><span>  GELESTORY  <br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz7.jpg" alt=""/>
+                            <br/><span> GELESTORY  <br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_fz8.jpg" alt=""/>
+                            <br/><span>GELESTORY <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_fz9.jpg" alt=""/>
+                            <br/><span>  GELESTORY  <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_fz10.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥7890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_fz8.jpg" alt=""/>
+                            <br/><span>GELESTORY  <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_fz3.jpg" alt=""/>
+                            <br/><span> GELESTORY  <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz4.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_fz2.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥28900</span>
+                        </a></dd>
+                    </dl>
+                </div>
+                <div class="swiper-slide swiper-no-swiping" style="background: #fff;">
+                    <ul class="m2_banner">
+                        <li><a href=""><img src="images/sc_nb.jpg" alt=""/></a></li>
+                    </ul>
+                    <ul class="m2_lb">
+                        <li><a href="">综合 <img src="images/sc_jt.jpg" alt=""/></a></li>
+                        <li class="lb_li2"><a href="">品牌</a>
+                            <dl class="m2_dl">
+                                <dt>品牌</dt>
+                                <dd><a href="">Armani 阿玛尼</a></dd>
+                                <dd> <a href="#">Alexander Wang亚历山大</a></dd>
+                                <dd ><a href="">Altuzarra奥图扎拉</a></dd>
+                                <dd ><a href="">巴黎世家 </a></dd>
+                                <dd><a href="">巴利</a></dd>
+                                <dd><a href="">巴宝莉</a></dd>
+                                <dd><a href="">巴宝莉</a></dd>
+                                <dd ><a href="">巴尔曼</a></dd>
+                                <dd ><a href="">香奈儿</a></dd>
+                                <dd><a href="">蔻驰</a></dd>
+                            </dl></li>
+                        <li><a href="">分类</a></li>
+                        <li><a href="">筛选 <img src="images/sc_sx.jpg" alt=""/></a></li>
+                    </ul>
+                    <dl class="m2_xb m2_nb">
+                        <dd><a href=""><img src="images/sc_nb6.jpg" alt=""/>
+                            <br/><span> GELESTORY <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb2.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥28900</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_nb3.jpg" alt=""/>
+                            <br/><span> GELESTORY  <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb4.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_nb5.jpg" alt=""/>
+                            <br/><span>GELESTORY   <br/>￥888890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb6.jpg" alt=""/>
+                            <br/><span> GELESTORY  <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb7.jpg" alt=""/>
+                            <br/><span>  GELESTORY<br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb8.jpg" alt=""/>
+                            <br/><span> GELESTORY  <br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_nb9.jpg" alt=""/>
+                            <br/><span>GELESTORY  <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_nb10.jpg" alt=""/>
+                            <br/><span>  GELESTORY  <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_nb11.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥7890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb2.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb3.jpg" alt=""/>
+                            <br/><span>GELESTORY <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_nb4.jpg" alt=""/>
+                            <br/><span>GELESTORY   <br/>￥2890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb5.jpg" alt=""/>
+                            <br/><span>GELESTORY  <br/>￥28690</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb6.jpg" alt=""/>
+                            <br/><span>GELESTORY  <br/>￥28690</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_nb4.jpg" alt=""/>
+                            <br/><span>GELESTORY   <br/>￥888890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb5.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb6.jpg" alt=""/>
+                            <br/><span>  GELESTORY  <br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb7.jpg" alt=""/>
+                            <br/><span> GELESTORY  <br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_nb8.jpg" alt=""/>
+                            <br/><span>GELESTORY <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_nb9.jpg" alt=""/>
+                            <br/><span>  GELESTORY  <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_nb10.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥7890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_nb8.jpg" alt=""/>
+                            <br/><span>GELESTORY  <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_nb5.jpg" alt=""/>
+                            <br/><span>GELESTORY   <br/>￥888890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb6.jpg" alt=""/>
+                            <br/><span> GELESTORY  <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb7.jpg" alt=""/>
+                            <br/><span>  GELESTORY<br/>￥890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb8.jpg" alt=""/>
+                            <br/><span> GELESTORY  <br/>￥28190</span>
+                        </a></dd>
+                        <dd><a href=""><img src="images/sc_nb9.jpg" alt=""/>
+                            <br/><span>GELESTORY  <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_nb10.jpg" alt=""/>
+                            <br/><span>  GELESTORY  <br/>￥5890</span></a></dd>
+                        <dd><a href=""><img src="images/sc_nb11.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥7890</span></a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb2.jpg" alt=""/>
+                            <br/><span> GELESTORY   <br/>￥4890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb3.jpg" alt=""/>
+                            <br/><span>GELESTORY <br/>￥2890</span>
+                        </a></dd>
+                        <dd><a href="">
+                            <img src="images/sc_nb7.jpg" alt=""/>
+                            <br/><span>  GELESTORY<br/>￥890</span>
+                        </a></dd>
+                    </dl>
+                </div>
+                <div class="swiper-slide swiper-no-swiping" style="background: pink;">内容 bbbbbbbbbbbbbbbbbvb</div>
+            </div>
+        </div>
+
+    </div>
+</main>
+<footer>
+    <ul class="f_ul1">
+        <li class="f_li1"><a href="index1.html"></a></li>
+        <li class="f_li2"><a href="sc1.html"></a></li>
+        <li class="f_li3"><a href="lvy.html"></a></li>
+        <li class="f_li4"><a href=""></a></li>
+        <li class="f_li5"><a href="my.html"></a></li>
+    </ul>
+</footer>
+<script>
+    $(function() {
+        function setCurrentSlide(ele, index) {
+            $(".swiper1 .swiper-slide").removeClass("selected");
+            ele.addClass("selected");
+            //swiper1.initialSlide=index;
+        }
+
+        var swiper1 = new Swiper('.swiper1', {
+//					设置slider容器能够同时显示的slides数量(carousel模式)。
+//					可以设置为number或者 'auto'则自动根据slides的宽度来设定数量。
+//					loop模式下如果设置为'auto'还需要设置另外一个参数loopedSlides。
+            slidesPerView: 5.5,
+            paginationClickable: true,//此参数设置为true时，点击分页器的指示点分页器会控制Swiper切换。
+            spaceBetween: 10,//slide之间的距离（单位px）。
+            freeMode: true,//默认为false，普通模式：slide滑动时只滑动一格，并自动贴合wrapper，设置为true则变为free模式，slide会根据惯性滑动且不会贴合。
+            loop: false,//是否可循环
+            onTab: function(swiper) {
+                var n = swiper1.clickedIndex;
+            }
+        });
+        swiper1.slides.each(function(index, val) {
+            var ele = $(this);
+            ele.on("click", function() {
+                setCurrentSlide(ele, index);
+                swiper2.slideTo(index, 500, false);
+                //mySwiper.initialSlide=index;
+            });
+        });
+
+        var swiper2 = new Swiper('.swiper2', {
+            //freeModeSticky  设置为true 滑动会自动贴合
+            direction: 'horizontal',//Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)。
+            loop: false,
+//					effect : 'fade',//淡入
+            //effect : 'cube',//方块
+            //effect : 'coverflow',//3D流
+//					effect : 'flip',//3D翻转
+            autoHeight: true,//自动高度。设置为true时，wrapper和container会随着当前slide的高度而发生变化。
+            onSlideChangeEnd: function(swiper) {  //回调函数，swiper从一个slide过渡到另一个slide结束时执行。
+                var n = swiper.activeIndex;
+                setCurrentSlide($(".swiper1 .swiper-slide").eq(n), n);
+                swiper1.slideTo(n, 500, false);
+            }
+        });
+    });
+</script>
+</body>
+</html>
