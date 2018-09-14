@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width,initial-scale=1.0">
+    <title>商城</title>
+    <script src="js/jquery.min.js"></script>
+    <!--<script type="text/javascript" src="js/swiper-3.4.0.jquery.min.js" ></script>-->
+    <!--<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>-->
+    <!--<link rel="stylesheet" href="css/swiper-3.2.7.min.css" />-->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/choumei.min.css">
+    <link rel="stylesheet" href="css/sc.css" type="text/css"/>
+    <style>
+        /*body {*/
+            /*min-width: 320px;*/
+            /*max-width: 640px;*/
+            /*margin: 0 auto;*/
+            /*color: #333;*/
+            /*padding: 0;*/
+            /*font-family: "Microsoft Yahei";*/
+            /*text-align: center;*/
+        /*}*/
+        .container {
+            /*width: 100%;*/
+            border: 1px solid #ccc;
+        }
+        .swiper1 {
+            /*position: fixed;*/
+            /*top:0px;z-index: 9999;*/
+            width: 100%;
+            background: #fff;
+        }
+        .swiper1 .selected {
+            color: #ec5566;opacity: 1;
+            border-bottom: 2px solid brown;
+        }
+        .swiper1 .swiper-slide {
+            text-align: center;
+            font-size: 16px;
+            height: 50px;opacity: 1;
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+            cursor: pointer;
+            color: #A2A2A2;
+        }
+        .swiper2 {
+            width: 100%;
+        }
+        .swiper2 .swiper-slide {
+            height:3000px;
+            /*background: #fff;*/
+            text-align: center;
+            box-sizing: border-box !important;
+            overflow-x: hidden !important;
+        }
+    </style>
+    <!--<script language="javascript" type="text/javascript">-->
+        <!--function leftTimer(year,month,day,hour,minute,second){-->
+            <!--var leftTime = (new Date(year,month-1,day,hour,minute,second)) -(new Date()); //计算剩余的毫秒数-->
+            <!--var days = parseInt(leftTime / 100000 / 100 / 60 / 24 , 10); //计算剩余的天数-->
+            <!--var hours = parseInt(leftTime / 1000 / 60 / 60 % 24 , 10); //计算剩余的小时-->
+            <!--var minutes = parseInt(leftTime / 10000 / 600 % 60, 10);//计算剩余的分钟-->
+            <!--var seconds = parseInt(leftTime / 1000 % 60, 10);//计算剩余的秒数-->
+            <!--days = checkTime(days);-->
+            <!--hours = checkTime(hours);-->
+            <!--minutes = checkTime(minutes);-->
+            <!--seconds = checkTime(seconds);-->
+            <!--setInterval("leftTimer(2016,11,11,11,11,11)",1000);-->
+            <!--document.getElementById("timer").innerHTML = days+"天" + hours+"时" + minutes+"分"+seconds+"秒";-->
+        <!--}-->
+        <!--function checkTime(i){ //将0-9的数字前面加上0，例1变为01-->
+            <!--if(i<10)-->
+            <!--{-->
+                <!--i = "" + i;-->
+            <!--}-->
+            <!--return i;-->
+        <!--}-->
+
+    <!--</script>-->
+</head>
+<body>
+        <!--onload="leftTimer()"-->
+
+<header>
+    <ul class="h_ul1">
+        <form action="">
+            <li><a href=""><img src="images/index_sys.jpg" alt=""/></a></li>
+            <li><a href=""><input size="30px" type="text" /> <span></span></a></li>
+            <li><a href=""><img src="images/index_bb.jpg" alt=""/></a></li>
+        </form>
+    </ul>
+    <div class="banner">
+        <ul>
+            <li  style="background-image: url('images/sc_banner1.jpg');">
+                <div class="inner">
+                </div>
+            </li>
+            <li  style="background-image: url('images/sc_banner2.jpg'); opacity：0.6 ;">
+                <div class="inner">
+                </div>
+            </li>
+            <li  style="background-image: url('images/sc_banner3.jpg'); opacity：0.6;">
+                <div class="inner">
+                </div>
+            </li>
+            <li   style="background-image: url('images/sc_banner2.jpg'); opacity：0.6;">
+                <div class="inner">
+                </div>
+            </li>
+            <li   style="background-image: url('images/sc_banner1.jpg'); opacity：0.6;">
+                <div class="inner">
+                </div>
+            </li>
+        </ul>
+    </div>
+</header>
+<!--main-->
+<main>
+    <!--<ul class="m_ul2">-->
+        <!--<li><a href="">首页</a></li>-->
+        <!--<li><a href="">箱包</a></li>-->
+        <!--<li><a href="">美妆</a></li>-->
+        <!--<li><a href="">服装</a></li>-->
+        <!--<li><a href="">腕表</a></li>-->
+        <!--<li><a href="">配饰</a></li>-->
+    <!--</ul>-->
+    <!--<div class="ys">-->
+    <!--<ul class="m_ul1">-->
+        <!--<li><a href=""><img src="images/sc_fl1.jpg" alt=""/><span>分类</span></a></li>-->
+        <!--<li><a href=""><img src="images/sc_fl2.jpg" alt=""/><span>专柜自提</span></a></li>-->
+        <!--<li><a href=""><img src="images/sc_fl3.jpg" alt=""/><span>拼团</span></a></li>-->
+        <!--<li><a href=""><img src="images/sc_fl4.jpg" alt=""/><span>会员特权</span></a></li>-->
+        <!--<li><a href=""><img src="images/sc_fl5.jpg" alt=""/><span>礼品</span></a></li>-->
+    <!--</ul>-->
+    <!--<div id="time">-->
+    <!--<h4>限时秒杀：</h4>-->
+    <!--<div id="timer"></div></div>-->
+    <!--<div class="swiper-container" >-->
+        <!--<div class="swiper-wrapper">-->
+            <!--<div class="swiper-slide"><img src="images/sc_ms1.jpg" class="main-img"></div>-->
+            <!--<div class="swiper-slide"><img src="images/sc_ms2.jpg" class="main-img"></div>-->
+            <!--<div class="swiper-slide"><img src="images/sc_ms3.jpg" class="main-img"></div>-->
+            <!--<div class="swiper-slide"><img src="images/sc_ms4.jpg" class="main-img"></div>-->
+            <!--<div class="swiper-slide"><img src="images/sc_ms5.jpg" class="main-img"></div>-->
+            <!--<div class="swiper-slide"><img src="images/sc_ms6.jpg" class="main-img"></div>-->
+        <!--</div>-->
+    <!--</div></div>-->
+    <!--<ul class="m_ul3">-->
+        <!--<li><a href=""><img src="images/sc_xnr1.jpg" alt=""/></a></li>-->
+        <!--<li class="li2"><a href=""><img src="images/sc_xnr4.jpg" alt=""/></a></li>-->
+        <!--<li class="li2"><a href=""><img src="images/sc_xnr5.jpg" alt=""/></a></li>-->
+        <!--<li class="li2"><a href=""><img src="images/sc_xnr6.jpg" alt=""/></a></li>-->
+        <!--<li><a href=""></a></li>-->
+    <!--</ul>-->
+    <!--<ul class="m_ul5">-->
+        <!--<li><a href=""><img src="images/sc_sp1.jpg" alt=""/></a></li>-->
+        <!--<li><a href="">-->
+            <!--<video src="images/1533180505%20(4).mp4" controls loop></video>-->
+        <!--</a></li>-->
+        <!--<li class="li5_2"><a href=""><img src="images/sc_sp.jpg" alt=""/></a></li>-->
+        <!--<li class="li5_2"><a href=""><img src="images/sc_sp2.jpg" alt=""/></a></li>-->
+    <!--</ul>-->
+    <!--<div class="center">-->
+        <!--<dl>-->
+            <!--<dt><a href=""><img src="images/sc_jfx.jpg" alt=""/></a></dt>-->
+            <!--<dd><a href=""><img src="images/sc_jfx1.jpg" alt=""/></a></dd>-->
+        <!--</dl> <ul class="m_ul4">-->
+                <!--<div class="center1">-->
+                    <!--<li><a href="">-->
+                        <!--<img src="images/sc_jfx2.jpg" alt=""/>-->
+                        <!--<span>Givenchy 纪梵希</span>-->
+                        <!--<br/><span class="zt">￥9890</span></a></li>-->
+                    <!--<li><a href="">-->
+                        <!--<img src="images/sc_jfx3.jpg" alt=""/>-->
+                        <!--<span>Givenchy 纪梵希</span>-->
+                        <!--<br/><span class="zt">￥295</span></a></li>-->
+                    <!--<li><a href="">-->
+                        <!--<img src="images/sc_jfx4.jpg" alt=""/>-->
+                        <!--<span>Givenchy 纪梵希</span>-->
+                        <!--<br/><span class="zt">￥440</span>-->
+                    <!--</a></li>-->
+                    <!--<li><a href="">-->
+                        <!--<img src="images/sc_jfx5.jpg" alt=""/>-->
+                        <!--<span>Givenchy 纪梵希</span>-->
+                        <!--<br/><span class="zt">￥495</span>-->
+                    <!--</a></li>-->
+                    <!--<li><a href="">-->
+                        <!--<img src="images/sc_jfx6.jpg" alt=""/>-->
+                        <!--<span>Givenchy 纪梵希</span>-->
+                        <!--<br/><span class="zt">￥325</span>-->
+                    <!--</a></li>-->
+                    <!--<li><a href="">-->
+                        <!--<img src="images/sc_jfx7.jpg" alt=""/>-->
+                        <!--<span>Givenchy 纪梵希</span>-->
+                        <!--<br/><span class="zt">￥1650</span>-->
+                    <!--</a></li>-->
+                    <!--<li><a href="">-->
+                        <!--<img src="images/sc_jfx8.jpg" alt=""/>-->
+                        <!--<span>Givenchy 纪梵希</span>-->
+                        <!--<br/><span class="zt">￥280</span>-->
+                    <!--</a></li>-->
+                    <!--<li><a href="">-->
+                        <!--<img src="images/sc_jfx9.jpg" alt=""/>-->
+                        <!--<span>Givenchy 纪梵希</span>-->
+                        <!--<br/><span class="zt">￥339</span>-->
+                    <!--</a></li>-->
+                    <!--<li class="li1"><a href=""><span>Show</span><br/>ALL</a></li>-->
+                <!--</div></ul>-->
+    <!--</div>-->
+    <!--<div class="center center2">-->
+        <!--<dl>-->
+            <!--<dd><a href=""><img src="images/sc_nb1.jpg" alt=""/></a></dd>-->
+        <!--</dl> <ul class="m_ul4">-->
+        <!--<div class="center1">-->
+            <!--<li><a href="">-->
+                <!--<img src="images/sc_nb2.jpg" alt=""/>-->
+                <!--<span>Rolex 劳力士</span>-->
+                <!--<br/><span class="zt">￥989000</span></a></li>-->
+            <!--<li><a href="">-->
+                <!--<img src="images/sc_nb3.jpg" alt=""/>-->
+                <!--<span>Rolex 劳力士</span>-->
+                <!--<br/><span class="zt">￥245000</span></a></li>-->
+            <!--<li><a href="">-->
+                <!--<img src="images/sc_nb4.jpg" alt=""/>-->
+                <!--<span>Rolex 劳力士</span>-->
+                <!--<br/><span class="zt">￥440000</span>-->
+            <!--</a></li>-->
+            <!--<li><a href="">-->
+                <!--<img src="images/sc_nb5.jpg" alt=""/>-->
+                <!--<span>Rolex 劳力士</span>-->
+                <!--<br/><span class="zt">￥495000</span>-->
+            <!--</a></li>-->
+            <!--<li><a href="">-->
+                <!--<img src="images/sc_nb6.jpg" alt=""/>-->
+                <!--<span>Rolex 劳力士</span>-->
+                <!--<br/><span class="zt">￥325000</span>-->
+            <!--</a></li>-->
+            <!--<li><a href="">-->
+                <!--<img src="images/sc_nb7.jpg" alt=""/>-->
+                <!--<span>Rolex 劳力士</span>-->
+                <!--<br/><span class="zt">￥1650000</span>-->
+            <!--</a></li>-->
+            <!--<li><a href="">-->
+                <!--<img src="images/sc_nb8.jpg" alt=""/>-->
+                <!--<span>Rolex 劳力士</span>-->
+                <!--<br/><span class="zt">￥280000</span>-->
+            <!--</a></li>-->
+            <!--<li><a href="">-->
+                <!--<img src="images/sc_nb9.jpg" alt=""/>-->
+                <!--<span>Rolex 劳力士</span>-->
+                <!--<br/><span class="zt">￥339000</span>-->
+            <!--</a></li>-->
+            <!--<li class="li1"><a href=""><span>Show</span><br/>ALL</a></li>-->
+        <!--</div></ul>-->
+    <!--</div>-->
+<!--</main>-->
+<script src="js/jquery-latest.min.js"></script>
+<script src="js/unslider.min.js"></script>
+<script>
+    $(function() {
+        function setCurrentSlide(ele, index) {
+            $(".swiper1 .swiper-slide").removeClass("selected");
+            ele.addClass("selected");
+            //swiper1.initialSlide=index;
+        }
+
+        var swiper1 = new Swiper('.swiper1', {
+//					设置slider容器能够同时显示的slides数量(carousel模式)。
+//					可以设置为number或者 'auto'则自动根据slides的宽度来设定数量。
+//					loop模式下如果设置为'auto'还需要设置另外一个参数loopedSlides。
+            slidesPerView: 5.5,
+            paginationClickable: true,//此参数设置为true时，点击分页器的指示点分页器会控制Swiper切换。
+            spaceBetween: 10,//slide之间的距离（单位px）。
+            freeMode: true,//默认为false，普通模式：slide滑动时只滑动一格，并自动贴合wrapper，设置为true则变为free模式，slide会根据惯性滑动且不会贴合。
+            loop: false,//是否可循环
+            onTab: function(swiper) {
+                var n = swiper1.clickedIndex;
+            }
+        });
+        swiper1.slides.each(function(index, val) {
+            var ele = $(this);
+            ele.on("click", function() {
+                setCurrentSlide(ele, index);
+                swiper2.slideTo(index, 500, false);
+                //mySwiper.initialSlide=index;
+            });
+        });
+
+        var swiper2 = new Swiper('.swiper2', {
+            //freeModeSticky  设置为true 滑动会自动贴合
+            direction: 'horizontal',//Slides的滑动方向，可设置水平(horizontal)或垂直(vertical)。
+            loop: false,
+//					effect : 'fade',//淡入
+            //effect : 'cube',//方块
+            //effect : 'coverflow',//3D流
+//					effect : 'flip',//3D翻转
+            autoHeight: true,//自动高度。设置为true时，wrapper和container会随着当前slide的高度而发生变化。
+            onSlideChangeEnd: function(swiper) {  //回调函数，swiper从一个slide过渡到另一个slide结束时执行。
+                var n = swiper.activeIndex;
+                setCurrentSlide($(".swiper1 .swiper-slide").eq(n), n);
+                swiper1.slideTo(n, 500, false);
+            }
+        });
+    });
+    if(window.chrome) {
+        $('.banner li').css('background-size', '100% 500px');
+    }
+
+    $('.banner').unslider({
+//        arrows: true,
+        fluid: true,
+        dots: true
+    });
+
+    //  Find any element starting with a # in the URL
+    //  And listen to any click events it fires
+    $('a[href^="#"]').click(function() {
+        //  Find the target element
+        var target = $($(this).attr('href'));
+
+        //  And get its position
+        var pos = target.offset(); // fallback to scrolling to top || {left: 0, top: 0};
+
+        //  jQuery will return false if there's no element
+        //  and your code will throw errors if it tries to do .offset().left;
+        if(pos) {
+            //  Scroll the page
+            $('html, body').animate({
+                scrollTop: pos.top,
+                scrollLeft: pos.left
+            }, 400);
+        }
+
+        //  Don't let them visit the url, we'll scroll you there
+        return false;
+    });
+
+    var GoSquared = {acct: 'GSN-396664-U'};
+</script>
+<script type="text/javascript" src="js/swiper.min.js"></script>
+<script type="text/javascript" src="js/choumei.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box{
+            width:100%;
+            height: 1000px;
+            background: pink;
+
+        }
+        .box1{display: none;
+            width:100%;
+            height: 1000px;
+            background: red;
+        }
+        .box2{display: none;
+            width:100%;
+            height: 1000px;
+            background: blue;
+        }
+        .box3{display: none;
+            width:100%;
+            height: 1000px;
+            background: yellow;
+        }
+
+      .box1:hover #down {
+           display: block;
+        }
+    </style>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            //显示  显示w h opacity display:none
+            // 参数为时间 数字/fast slow
+            $("#show").click(function(){
+                $(".box").show(400);
+            });
+            //隐藏
+            $("#hide").click(function(){
+                $(".box").hide(400);
+            });
+            //下滑
+            $("#down").click(function(){
+                $(".box").slideDown(400);
+            });
+            //上滑
+            $("#up").click(function(){
+                $(".box").slideUp(400);
+            });
+            //淡入
+            $("#in").click(function(){
+                $(".box").fadeIn(400);
+            })
+            //淡出
+            $("#out").click(function(){
+                $(".box").fadeOut(400);
+            })
+        })
+    </script>
+
+</head>
+<body>
+<button id="show">显示</button>
+<button id="hide">隐藏</button>
+<button id="down">下滑</button>
+<button id="up">上滑</button>
+<button id="in">淡入</button>
+<button id="out">淡出</button>
+<div class="box"></div>
+<div class="box1"><a href="#down"></a></div>
+<div class="box2"></div>
+<div class="box3"></div>
+<div class="box4"></div>
+<div class="box5"></div>
+</body>
+</html>
